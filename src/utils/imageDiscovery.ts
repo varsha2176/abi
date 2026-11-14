@@ -49,7 +49,7 @@ const photoMetadataList: Array<{
 export const discoveredPhotos: PhotoItem[] = photoMetadataList.map((meta, index) => {
   return {
     id: index + 1,
-    url: `/image/${meta.filename}`,
+    url: `${import.meta.env.BASE_URL}image/${meta.filename}`,
     filename: meta.filename,
     caption: meta.caption || siteContent.gallery.defaultCaptions[index % siteContent.gallery.defaultCaptions.length],
     width: meta.width,

@@ -12,7 +12,7 @@ export const AudioPlayer = forwardRef<AudioPlayerHandle>((_, ref) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const audio = new Audio('/music.mp3');
+    const audio = new Audio(`${import.meta.env.BASE_URL}music.mp3`);
     audio.loop = true;
     audioRef.current = audio;
 
